@@ -1,0 +1,12 @@
+<svg xmlns="http://w3.org" width="540" height="280" viewBox="0 0 540 280">
+  <rect width="540" height="280" fill="#ffffff" rx="8" stroke="#e0e0e0"/>
+  <text x="270" y="34" font-family="Arial, sans-serif" font-size="15" font-weight="bold" text-anchor="middle" fill="#222">HIS/LIS Barcode Printer Connectivity Test Summary</text>
+  <line x1="70" y1="220" x2="470" y2="220" stroke="#888" stroke-width="1.5"/>
+  <line x1="70" y1="60" x2="70" y2="220" stroke="#888" stroke-width="1.5"/>
+  <rect x="130" y="110" width="80" height="110" fill="#2E7D32" rx="4"/>
+  <text x="170" y="102" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#2E7D32">2 Passed</text>
+  <text x="170" y="242" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">TCP 9100 ACK OK</text>
+  <rect x="320" y="165" width="80" height="55" fill="#EF6C00" rx="4"/>
+  <text x="360" y="157" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#EF6C00">1 Blocked</text>
+  <text x="360" y="242" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Invalid ID Guarded</text>
+</svg>

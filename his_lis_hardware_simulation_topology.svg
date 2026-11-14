@@ -1,0 +1,93 @@
+<svg xmlns="http://w3.org" width="900" height="440" viewBox="0 0 900 440">
+  <defs>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#1565C0"/>
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#2E7D32"/>
+    </marker>
+    <marker id="arrow-orange" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#EF6C00"/>
+    </marker>
+  </defs>
+
+  <!-- Background & Header -->
+  <rect width="900" height="440" fill="#F8FAFC" rx="10" stroke="#CBD5E1" stroke-width="1.5"/>
+  <rect x="0" y="0" width="900" height="46" fill="#0F172A" rx="10"/>
+  <rect x="0" y="34" width="900" height="12" fill="#0F172A"/>
+  <text x="450" y="29" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#FFFFFF">
+    Hospital EMR / HIS / LIS &amp; Clinical Lab Hardware Integration Simulation Topology
+  </text>
+
+  <!-- Zone 1: Hospital Core IT Zone -->
+  <rect x="25" y="65" width="230" height="345" fill="#EFF6FF" rx="8" stroke="#93C5FD" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="140" y="88" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#1E40AF">Hospital Core IT Zone</text>
+
+  <rect x="45" y="110" width="190" height="75" fill="#FFFFFF" rx="6" stroke="#2563EB" stroke-width="2"/>
+  <text x="140" y="138" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#1E3A8A">電子カルテ (EMR)</text>
+  <text x="140" y="158" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#475569">Doctor Order Entry</text>
+  <text x="140" y="174" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#475569">Result Viewer</text>
+
+  <rect x="45" y="235" width="190" height="85" fill="#FFFFFF" rx="6" stroke="#2563EB" stroke-width="2"/>
+  <text x="140" y="263" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#1E3A8A">HIS Gateway Server</text>
+  <text x="140" y="283" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#475569">HL7 v2.5 ORM^O01 / ORU^R01</text>
+  <text x="140" y="301" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#0284C7">IP: 10.10.1.10 (Port 2575)</text>
+
+  <line x1="140" y1="185" x2="140" y2="230" stroke="#1565C0" stroke-width="2" marker-end="url(#arrow-blue)" marker-start="url(#arrow-blue)"/>
+
+  <!-- Zone 2: LIS Middleware & Validation Engine -->
+  <rect x="315" y="65" width="265" height="345" fill="#F0FDF4" rx="8" stroke="#86EFAC" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="447" y="88" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#166534">LIS &amp; Integration Test Engine</text>
+
+  <rect x="335" y="125" width="225" height="105" fill="#FFFFFF" rx="6" stroke="#16A34A" stroke-width="2"/>
+  <text x="447" y="152" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#14532D">LIS Core Server (HK-LAS)</text>
+  <text x="447" y="172" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#334155">Specimen ID &amp; Barcode Mapping</text>
+  <text x="447" y="189" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#334155">QC Range &amp; Delta Check</text>
+  <text x="447" y="208" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#15803D">IP: 10.10.2.20 | DB: PostgreSQL</text>
+
+  <rect x="335" y="275" width="225" height="105" fill="#FEFCE8" rx="6" stroke="#CA8A04" stroke-width="2"/>
+  <text x="447" y="302" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#854D0E">Python Connectivity Simulator</text>
+  <text x="447" y="322" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#334155">1. Socket Loopback &amp; ACK/NAK Test</text>
+  <text x="447" y="339" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#334155">2. ZPL II Barcode Format Guard</text>
+  <text x="447" y="356" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#334155">3. ASTM / HL7 Packet Verification</text>
+
+  <line x1="447" y1="230" x2="447" y2="270" stroke="#2E7D32" stroke-width="2" marker-end="url(#arrow-green)" marker-start="url(#arrow-green)"/>
+
+  <!-- Connection HIS <-> LIS -->
+  <line x1="235" y1="265" x2="330" y2="180" stroke="#1565C0" stroke-width="2.2" marker-end="url(#arrow-blue)"/>
+  <text x="275" y="200" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#1E40AF" transform="rotate(-40 275,200)">HL7 Order</text>
+  <line x1="330" y1="205" x2="235" y2="290" stroke="#2E7D32" stroke-width="2.2" marker-end="url(#arrow-green)"/>
+  <text x="282" y="268" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#166534" transform="rotate(-40 282,268)">Lab Result</text>
+
+  <!-- Zone 3: Clinical Lab Hardware Floor -->
+  <rect x="640" y="65" width="235" height="345" fill="#FFF7ED" rx="8" stroke="#FDBA74" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="757" y="88" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#9A3412">Clinical Lab Hardware Floor</text>
+
+  <!-- Hardware 1: Barcode Printer -->
+  <rect x="660" y="110" width="195" height="80" fill="#FFFFFF" rx="6" stroke="#EA580C" stroke-width="2"/>
+  <text x="757" y="135" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#9A3412">Barcode Label Printer</text>
+  <text x="757" y="153" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#475569">Zebra / SATO (ZPL II / SBPL)</text>
+  <text x="757" y="171" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#C2410C">TCP Raw Socket Port 9100</text>
+
+  <!-- Hardware 2: Automated Analyzer -->
+  <rect x="660" y="212" width="195" height="80" fill="#FFFFFF" rx="6" stroke="#EA580C" stroke-width="2"/>
+  <text x="757" y="237" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#9A3412">Biochemistry Analyzer</text>
+  <text x="757" y="255" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#475569">ASTM E1381 / E1394 Protocol</text>
+  <text x="757" y="273" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#C2410C">RS-232C / TCP Serial Bridge</text>
+
+  <!-- Hardware 3: Specimen Sorter -->
+  <rect x="660" y="314" width="195" height="80" fill="#FFFFFF" rx="6" stroke="#EA580C" stroke-width="2"/>
+  <text x="757" y="339" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#9A3412">Specimen Tube Sorter</text>
+  <text x="757" y="357" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#475569">Optical Barcode Reader Check</text>
+  <text x="757" y="375" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#C2410C">Rack Routing &amp; Error Reject</text>
+
+  <!-- Connections LIS <-> Hardware -->
+  <line x1="560" y1="150" x2="655" y2="150" stroke="#EF6C00" stroke-width="2" marker-end="url(#arrow-orange)" marker-start="url(#arrow-orange)"/>
+  <text x="608" y="142" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#C2410C">ZPL / ACK</text>
+
+  <line x1="560" y1="190" x2="655" y2="250" stroke="#EF6C00" stroke-width="2" marker-end="url(#arrow-orange)" marker-start="url(#arrow-orange)"/>
+  <text x="612" y="210" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#C2410C">ASTM</text>
+
+  <line x1="560" y1="330" x2="655" y2="350" stroke="#EF6C00" stroke-width="2" marker-end="url(#arrow-orange)" marker-start="url(#arrow-orange)"/>
+  <text x="608" y="328" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#C2410C">Scan ID</text>
+</svg>

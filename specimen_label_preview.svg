@@ -1,0 +1,10 @@
+<svg xmlns="http://w3.org" width="460" height="220" viewBox="0 0 460 220">
+  <rect x="10" y="10" width="440" height="200" rx="12" fill="#FDFDFD" stroke="#333" stroke-width="2"/>
+  <rect x="10" y="10" width="440" height="34" rx="10" fill="#1565C0"/>
+  <text x="25" y="32" font-family="monospace, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF">CLINICAL LAB SPECIMEN LABEL (ZPL PREVIEW)</text>
+  <text x="395" y="32" font-family="monospace, sans-serif" font-size="13" font-weight="bold" fill="#FFEB3B">UNKNOWN</text>
+  <text x="28" y="68" font-family="monospace, sans-serif" font-size="14" font-weight="bold" fill="#111">SUBJ/PID: UT-2026-001 (F)</text>
+  <text x="28" y="92" font-family="monospace, sans-serif" font-size="13" fill="#333">ORDER: ORD2026111401 | BIO-01 (Liver Panel (ALT/AST))</text>
+  <rect x="45" y="118" width="4.4" height="52" fill="#111"/><rect x="52.5" y="118" width="6.6" height="52" fill="#111"/><rect x="65.0" y="118" width="2.2" height="52" fill="#111"/><rect x="70.0" y="118" width="4.4" height="52" fill="#111"/><rect x="82.5" y="118" width="2.2" height="52" fill="#111"/><rect x="90.0" y="118" width="4.4" height="52" fill="#111"/><rect x="97.5" y="118" width="6.6" height="52" fill="#111"/><rect x="107.5" y="118" width="4.4" height="52" fill="#111"/><rect x="117.5" y="118" width="2.2" height="52" fill="#111"/><rect x="127.5" y="118" width="4.4" height="52" fill="#111"/><rect x="135.0" y="118" width="4.4" height="52" fill="#111"/><rect x="142.5" y="118" width="6.6" height="52" fill="#111"/><rect x="155.0" y="118" width="2.2" height="52" fill="#111"/><rect x="162.5" y="118" width="2.2" height="52" fill="#111"/><rect x="167.5" y="118" width="4.4" height="52" fill="#111"/>
+  <text x="220" y="188" font-family="monospace, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#111">*SPEC261114001*</text>
+</svg>
