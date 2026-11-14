@@ -24,10 +24,6 @@ flowchart TD
     D & E & F -->|Clean & Validated| H[(Relational DB: SQLite/PostgreSQL<br>+ Audit Trail Table)]
     H --> I[R Statistical Analysis<br>Baseline Table 1 & QC Plots]
 ```
-## System & Lab Hardware Simulation Floorplan / 医療機器・システム接続シミュレーション構成図
-
-![HIS/LIS Hardware Simulation Topology](his_lis_hardware_simulation_topology.svg)
-
 ---
 
 ## Key Clinical DM Features / 主な実装機能
@@ -42,3 +38,7 @@ flowchart TD
    - Loads validated datasets into a structured relational database (`clinical_dm.db`) with timestamped `audit_trail` logging every validation action.
 4. **Biostatistics Handoff (R Integration):**
    - Provides `statistical_summary.R` to read locked/cleaned SQL tables and generate demographic summaries for Biostatisticians.
+
+## System & Lab Hardware Simulation Floorplan / 医療機器・システム接続シミュレーション構成図
+
+![HIS/LIS Hardware Simulation Topology](his_lis_hardware_simulation_topology.svg)
