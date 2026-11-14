@@ -24,6 +24,9 @@ flowchart TD
     D & E & F -->|Clean & Validated| H[(Relational DB: SQLite/PostgreSQL<br>+ Audit Trail Table)]
     H --> I[R Statistical Analysis<br>Baseline Table 1 & QC Plots]
 ```
+## System & Lab Hardware Simulation Floorplan / 医療機器・システム接続シミュレーション構成図
+
+![HIS/LIS Hardware Simulation Topology](his_lis_hardware_simulation_topology.svg)
 
 ---
 
